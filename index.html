@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="https://i.ibb.co/ymVVT7L6/IMG-20250504-WA0008.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saurabh Yadav — Portfolio</title>
+  <meta name="description" content="Saurabh Yadav — B.Tech (CSE, AI & ML). Developer. Projects: Real-Time Chat App, Games, Java Projects." />
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: rgba(255,255,255,0.04);
+      --glass: rgba(255,255,255,0.03);
+      --accent1: #7c3aed; /* purple */
+      --accent2: #06b6d4; /* cyan */
+      --muted: rgba(255,255,255,0.6);
+      --glass-border: rgba(255,255,255,0.06);
+      --max-w: 1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071126 0%,var(--bg) 100%);color:#e6eef8}
+    .wrap{max-width:var(--max-w);margin:32px auto;padding:20px}/* header */
+header{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;gap:14px;align-items:center}
+.logo{width:56px;height:56px;border-radius:14px;overflow:hidden;flex:0 0 56px;border:2px solid var(--glass-border);background:linear-gradient(135deg,var(--accent1),var(--accent2));display:grid;place-items:center}
+.logo img{width:100%;height:100%;object-fit:cover}
+.name{line-height:1}
+.name h1{margin:0;font-size:18px}
+.name p{margin:0;font-size:12px;color:var(--muted)}
+
+nav{display:flex;gap:14px;align-items:center}
+.btn{background:transparent;border:1px solid var(--glass-border);padding:8px 12px;border-radius:10px;font-weight:600;color:inherit;text-decoration:none}
+.cta{background:linear-gradient(90deg,var(--accent1),var(--accent2));padding:8px 14px;border-radius:10px;color:#001; font-weight:700}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin:28px 0}
+.intro{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:28px;border-radius:16px;border:1px solid var(--glass-border);backdrop-filter: blur(6px)}
+.eyebrow{display:inline-block;padding:6px 10px;border-radius:999px;background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#001;font-weight:700;font-size:12px}
+.intro h2{margin:14px 0 6px;font-size:28px}
+.intro p{margin:0;color:var(--muted);line-height:1.5}
+
+.profile-card{display:flex;flex-direction:column;gap:14px;padding:18px;border-radius:16px;border:1px solid var(--glass-border);background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent)}
+.pf-img{width:100%;height:260px;border-radius:12px;overflow:hidden}
+.pf-img img{width:100%;height:100%;object-fit:cover}
+.meta{display:flex;justify-content:space-between;align-items:center}
+.skills-inline{display:flex;flex-wrap:wrap;gap:8px}
+.chip{padding:6px 8px;border-radius:8px;background:var(--card);font-size:13px}
+
+/* projects */
+.section{margin:28px 0}
+.section h3{margin:0 0 14px}
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.card{padding:14px;border-radius:12px;background:var(--glass);border:1px solid var(--glass-border);transition:transform .28s ease, box-shadow .28s ease}
+.card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(2,6,23,0.6)}
+.card h4{margin:0 0 8px}
+.card p{margin:0;color:var(--muted);font-size:14px}
+.card .links{margin-top:12px;display:flex;gap:10px}
+
+/* contact */
+.contact{display:flex;gap:18px;align-items:center}
+
+/* footer */
+footer{margin-top:36px;padding:22px;border-radius:12px;border:1px solid var(--glass-border);background:linear-gradient(180deg, transparent, rgba(255,255,255,0.01));display:flex;justify-content:space-between;align-items:center}
+
+/* animations */
+.fade-up{opacity:0;transform:translateY(18px);transition:all .6s cubic-bezier(.2,.9,.2,1)}
+.fade-up.visible{opacity:1;transform:none}
+
+/* responsive */
+@media (max-width:980px){
+  .hero{grid-template-columns:1fr}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:600px){
+  header{flex-direction:column;align-items:flex-start}
+  .projects-grid{grid-template-columns:1fr}
+  .logo{width:48px;height:48px}
+  .pf-img{height:200px}
+}
+
+/* small helper */
+.small{font-size:13px;color:var(--muted)}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="https://i.ibb.co/ymVVT7L6/IMG-20250504-WA0008.jpg" alt="Saurabh"></div>
+        <div class="name"><h1>Saurabh Yadav</h1><p class="small">B.Tech CSE (AI & ML) — Developer</p></div>
+      </div>
+      <nav>
+        <a class="btn" href="#about">About</a>
+        <a class="btn" href="#projects">Projects</a>
+        <a class="btn" href="#contact">Contact</a>
+        <a class="btn cta" href="https://drive.google.com/file/d/1lLAi0_ftFWqe_QFQDRMVOWWiWGtGTenP/view?usp=drivesdk"  target="_blank" id="downloadResume">Resume</a>
+      </nav>
+    </header><main>
+  <section class="hero">
+    <div class="intro fade-up" id="about">
+      <span class="eyebrow">AI & Web Dev</span>
+      <h2>Hi, I'm Saurabh — I build web apps, games, and AI-assisted tools.</h2>
+      <p>I create full-stack projects (MERN) and interactive front-ends with a focus on performance and UX. Currently learning advanced NumPy, Spring Boot, Java features, and building AI-powered chat apps.</p>
+
+      <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
+        <a class="btn" href="#projects">See projects</a>
+        <a class="btn" href="mailto:saurabhyadav7041916@gmail.com">Email me</a>
+      </div>
+    </div>
+
+    <aside class="profile-card fade-up">
+      <div class="pf-img"><img src="https://i.ibb.co/ymVVT7L6/IMG-20250504-WA0008.jpg" alt="Saurabh profile"></div>
+      <div class="meta">
+        <div>
+          <div style="font-weight:700">Saurabh Yadav</div>
+          <div class="small">MERN | Java | Python | AI & ML</div>
+        </div>
+        <div class="skills-inline">
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Java</span>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:space-between;gap:8px">
+        <div class="small">
+          <div style="font-weight:700">Location</div>
+          <div class="small">India</div>
+        </div>
+        <div class="small">
+          <div style="font-weight:700">Email</div>
+          <div class="small">saurabhyadav7041916@gmail.com</div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section" id="skills">
+    <h3>Skills</h3>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      <span class="chip">HTML</span>
+      <span class="chip">CSS</span>
+      <span class="chip">JavaScript</span>
+      <span class="chip">React</span>
+      <span class="chip">Node.js</span>
+      <span class="chip">MongoDB</span>
+      <span class="chip">Java</span>
+      <span class="chip">Python</span>
+      <span class="chip">NumPy</span>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <h3>Projects</h3>
+    <div class="projects-grid">
+
+      <article class="card fade-up">
+        <h4>Real-Time Chat Application with AI Assistance (MERN)</h4>
+        <p>Full-stack real-time chat app with AI assistant, voice & text features — built with MongoDB, Express, React, Node.js.</p>
+        <div class="links">
+          <a class="btn" href="https://sspapp.netlify.app" target="_blank">Live</a>
+          <a class="btn" href="https://github.com/saurabhyadav1026" target="_blank">Repo</a>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <h4>ATM Interface (Java)</h4>
+        <p>Console-based ATM simulation using Java demonstrating OOP, file persistence, and user flows.</p>
+        <div class="links">
+          <a class="btn" href="https://github.com/saurabhyadav1026/ATM" target="_blank">Repo</a>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <h4>Sudoku Game (HTML/CSS/JS)</h4>
+        <p>Interactive browser Sudoku with generator & solver and nice UX for hinting and validation.</p>
+        <div class="links">
+          <a class="btn" href="https://sbhyd.w3spaces.com/sudoku.html" target="_blank">Live</a>
+          <a class="btn" href="https://github.com/saurabhyadav1026" target="_blank">Repo</a>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <h4>Ludo Game (HTML/CSS/JS)</h4>
+        <p>Multiplayer board game implementation for browsers — animations, dice logic, player turns.</p>
+        <div class="links">
+          <a class="btn" href="https://sbhyd.w3spaces.com/ludo.html" target="_blank">Live</a>
+          <a class="btn" href="https://github.com/saurabhyadav1026" target="_blank">Repo</a>
+        </div>
+      </article>
+
+      <article class="card fade-up">
+        <h4>Other Coursework & Utilities</h4>
+        <p>Assignments and small utilities: Engineering Mathematics, Prompt Engineering tools, sorting/algorithms demos.</p>
+        <div class="links"><a class="btn" href="#">Repo</a></div>
+      </article>
+
+      <article class="card fade-up">
+        <h4>Chatbot & AI Helpers</h4>
+        <p>AI features integrated into chat UI. Uses prompt engineering patterns (zero-shot, few-shot) and basic server-side handlers.</p>
+        <div class="links"><a class="btn" href="#">Demo</a><a class="btn" href="#">Repo</a></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact</h3>
+    <div class="contact">
+      <div class="card" style="flex:1">
+        <p class="small">Want to work together? Email me or connect on GitHub / LinkedIn. I respond fast to internship & freelance gigs.</p>
+        <p style="margin-top:12px;font-weight:700">Email: <a href="mailto:saurabhyadav7041916@gmail.com">saurabhyadav7041916@gmail.com</a></p>
+      </div>
+
+      <div style="min-width:260px">
+        <form id="contactForm" class="card">
+          <label class="small">Name</label>
+          <input id="cname" type="text" placeholder="Your name" style="width:100%;padding:8px;margin:8px 0;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:inherit" />
+          <label class="small">Message</label>
+          <textarea id="cmsg" placeholder="Quick message" style="width:100%;padding:8px;margin:8px 0;border-radius:8px;border:1px solid var(--glass-border);background:transparent;color:inherit"></textarea>
+          <button class="btn cta" type="button" id="sendBtn">Send</button>
+          <div id="formNote" class="small" style="margin-top:8px;color:var(--muted)"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="small">© <span id="year"></span> Saurabh Yadav — Built with ❤️ and JavaScript</div>
+  <div class="small">Made for portfolio • Replace demo links with real repos</div>
+</footer>
+
+  </div>  <script>
+    // small helpers: reveal on scroll
+    const els = document.querySelectorAll('.fade-up');
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if(e.isIntersecting){ e.target.classList.add('visible'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.12});
+    els.forEach(e=>obs.observe(e));
+
+    // year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // contact form (client-side demo)
+    document.getElementById('sendBtn').addEventListener('click', ()=>{
+      const name = document.getElementById('cname').value.trim();
+      const msg = document.getElementById('cmsg').value.trim();
+      const note = document.getElementById('formNote');
+      if(!name || !msg){ note.textContent = 'Please add name and message.'; return; }
+      // demo behaviour — replace with real endpoint
+      note.textContent = 'Thanks! This is a demo; replace with a backend to send messages.';
+      document.getElementById('cname').value = '';
+      document.getElementById('cmsg').value = '';
+    });
+
+    //      download demo — replace href with actual resume URL
+    document.getElementById('downloadResume').addEventListener('click', (e)=>{
+     e.preventDefault();
+     // alert('Resume download: replace the # in the Resume button with your real resume URL (PDF).');
+    });
+
+    // accessibility: keyboard quick nav
+    window.addEventListener('keyup', (e)=>{
+      if(e.key === 'p') location.hash = '#projects';
+      if(e.key === 'a') location.hash = '#about';
+      if(e.key === 'c') location.hash = '#contact';
+    });
+  </script></body>
+</html>
